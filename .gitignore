@@ -1,0 +1,11 @@
+# OS X
+.DS_Store
+
+# Jekyll compiled site folder
+_site/
+
+# emacs back up files
+*.*~
+
+#JetBrains IDE settings folder
+.idea/
