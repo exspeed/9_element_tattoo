@@ -3,6 +3,7 @@
 
 # Jekyll compiled site folder
 _site/
+.sass-cache/
 
 # emacs back up files
 *.*~

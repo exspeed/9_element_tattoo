@@ -22,10 +22,10 @@ plugins:
 # Site settings
 url: 'https://mydomain.com'
 baseurl: ''
-title: 'My website'
+title: '9 Element'
 description: 'This is my new website'
 permalink: pretty
-logo: "/assets/logo/arcurve.png"
+logo: "/assets/logos/Stroke-on-Trans-icon.png"
 
 # Pagination
 paginate: 5
@@ -33,10 +33,10 @@ paginate_path: blog/page:num
 
 # Header nav
 navigation_header:
-  Tattoos: /
-  News & Events: /about/
-  Store: /blog/
-  FAQS: /blog/
+  Tattoos: /tattoos
+  News & Events: /events
+  Store: /blog
+  FAQS: /about
 
 # Footer nav
 navigation_footer:
