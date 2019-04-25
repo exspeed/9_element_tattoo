@@ -1,7 +1,7 @@
 ---
 title: Welcome to 9 Element
 layout: front-page 
-feature_text: /assets/logos/White-on-Trans.png
+feature_text: /9_element_tattoo/assets/logos/White-on-Trans.png
 
 ---
 
