@@ -42,6 +42,16 @@ navigation_header:
 navigation_footer:
   Back to top: "#top"
 
+#Instagram
+instagram:
+  jimtran_:
+    Traditional Japanese: asian_tattoo_
+    Anime: animeink
+  jimtran_ll: 
+    - Flowers: flowertattoo
+
+
+
 # Collections
 collections:
   posts:

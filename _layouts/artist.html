@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{% include site-header.html %}
+
+
+{% for ighandle in site.instagram %}
+	{% if ighandle[0] == page.ig_handle %}
+		{% assign tags = ighandle[1] %}
+	{% endif %}
+{% endfor %}
+
+
+<main class="main container" style="background: rgba(0, 0, 0, 0 );" >
+
+  <article class="article  article--page  content  typeset">
+
+    <h1 >{{ page.title }} </h1>
+   
+
+     <img src="{{ page.profile_picture }}" alt="{{ page.profile_picture }}"/>
+    {{ content }}
+
+
+    <hr>
+
+    {% for art_style in tags %}
+    Title: {{art_style[0]}}      Hashtag: {{art_style[1]}} <br>
+
+	{% endfor %}
+
+  </article>
+
+  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}
