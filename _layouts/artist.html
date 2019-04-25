@@ -32,7 +32,7 @@ layout: default
  	Title: {{art_style[0]}}  Hashtag: {{art_style[1]}} <br>
 	{% endfor %}
 
- 	<div id="instafeed"></div>
+ 	<div id="instafeed"></div> LOOK2!
   </article>
 
   {% if page.aside == true %}{% include site-aside.html %}{% endif %}
@@ -42,13 +42,6 @@ layout: default
 
 {% include site-footer.html %}
 
-<script type="text/javascript" src="/assets/instafeed.min.js"></script>
-
-<script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'animeink',
-        clientId: '7e2efb0e47994ac9bd9a079a3fdb5146'
-    });
-    feed.run();
-</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/instafeed.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/custom.js"></script>
