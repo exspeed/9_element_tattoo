@@ -20,8 +20,8 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
-url: 'https://exspeed.github.io/9_element_tattoo/'
-baseurl: '/9_element_tattoo'
+url: 'https://mydomain.com'
+baseurl: ''
 title: '9 Element'
 description: 'This is my new website'
 permalink: pretty
