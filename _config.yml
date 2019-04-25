@@ -21,7 +21,7 @@ plugins:
 
 # Site settings
 url: ''
-baseurl: '9_element_tattoo'
+baseurl: '/9_element_tattoo'
 title: '9 Element'
 description: 'This is my new website'
 permalink: pretty
