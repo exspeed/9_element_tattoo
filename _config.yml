@@ -44,11 +44,14 @@ navigation_footer:
 
 #Instagram
 instagram:
-  jimtran_:
-    Traditional Japanese: asian_tattoo_
-    Anime: animeink
-  jimtran_ll: 
-    - Flowers: flowertattoo
+  Jim Tran: 
+    ig_handle:
+      - jimtran_
+      - jimtran_ll
+    tags:
+      Anime: animeink
+      Traditional Japanese: asian_tattoo_
+      Flowers: flowertattoo
 
 
 

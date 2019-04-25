@@ -4,9 +4,10 @@ layout: default
 {% include site-header.html %}
 
 
-{% for ighandle in site.instagram %}
-	{% if ighandle[0] == page.ig_handle %}
-		{% assign tags = ighandle[1] %}
+{% for user in site.instagram %}
+	{% if user[0] == page.title %}
+		{% assign tags = user[1].tags %}
+		{% assign ighandles = user[1].ig_handle %}
 	{% endif %}
 {% endfor %}
 
@@ -23,10 +24,12 @@ layout: default
 
 
     <hr>
-
+ 	{% for username in ighandles %}
+ 	{{username}} <br>
+	{% endfor %}
+	<br>
     {% for art_style in tags %}
-    Title: {{art_style[0]}}      Hashtag: {{art_style[1]}} <br>
-
+ 	Title: {{art_style[0]}}  Hashtag: {{art_style[1]}} <br>
 	{% endfor %}
 
   </article>
