@@ -10,7 +10,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 1200px;
+ //max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -230,6 +230,7 @@ a .icon {
 img {
   max-width: 100%;
   height: auto;
+
 }
 
 .figure {
@@ -461,6 +462,15 @@ pre code {
     white-space: pre;
     overflow-x: scroll;
   }
+
+  h1 {
+    font-size: 200%;
+  }
+  h2{
+      font-size: 150%;
+  }
+
+
 }
 
 

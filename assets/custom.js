@@ -1,19 +1,35 @@
 $(document).ready(function() {
 
 
-    var userFeed = new Instafeed({
+
+    function instafeed_instagram() {
+       var elements = document.querySelectorAll("[id^='instafetch']");
+
+       var instance = [];
+      
+       for(var i = 0; i < elements.length; i++){
+        var token = elements[i].getAttribute("token");
+        var userid = elements[i].getAttribute("userid");
+        var elementID = elements[i].getAttribute("id");
+        var tag = elements[i].getAttribute("tag");
+
+        instance.push(
+            new Instafeed({
         get: 'user',
-        userId: '224007036',
+        userId: userid,
+        target: elementID,
         limit: 12,
         resolution: 'standard_resolution',
-        accessToken: '8272226300.7e2efb0.82dabc3251034e898bb2e4a5a715338e',
+        accessToken: token,
         sortBy: 'most-recent',
-        template: '<div class="col-lg-3 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
-    });
+        template: '<div class="col-lg-4 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
+        }));
+        instance[i].run();
+       }
+    };
 
 
-    userFeed.run();
-
+    instafeed_instagram();
     
     // This will create a single gallery from all elements that have class "gallery-item"
     $('.gallery').magnificPopup({
@@ -23,6 +39,5 @@ $(document).ready(function() {
             enabled: true
         }
     });
-
 
 });
