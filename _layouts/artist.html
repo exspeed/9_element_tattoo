@@ -10,6 +10,13 @@ layout: default
 	{% endif %}
 {% endfor %}
 
+{% for artist in site.artist %}
+	{% if artist[0] == page.title %}
+		{% assign artist_categories = artist[1] %}
+	{% endif %}
+{% endfor %}
+
+
 
 <main class="main container">
 
@@ -29,14 +36,34 @@ layout: default
 
     <hr>
 
- 	{% for username in ighandles %}
- 		{% for tag in username.hashtag %}
- 			<h2> {{ tag[0] }} </h2> 
- 				<div id="{{ tag[1] }}" class="row gallery"></div>
-				<div id="instafetch-{{ tag[1] }}"  class="row gallery" userid={{username.userID}} 
-				token={{username.authToken}} tag={{tag[1]}}></div>
- 			<hr>
- 		{% endfor %}
+    
+ 	<h2> Most Recent Work </h2> 
+ 	 {% for username in ighandles %}
+		<div id="instafetch-{{ username.userID }}"  class="row gallery" userid={{username.userID}} 
+			token={{username.authToken}} tag={{tag[1]}}></div>
+	{% endfor %}
+	 <hr>
+
+	
+	{% for art in artist_categories%}
+	<h2> {{ art[0]}} </h2>
+	 {% assign postsCounter = postsCounter | plus: 1 %}
+
+	<div class="row gallery">
+		{% for image in site.static_files %}
+    		{% if image.path contains art[1] %}
+			<div class="col-lg-4 instaimg">
+			<a href="{{ site.baseurl }}{{image.path}}" title="" target="_blank">
+       			<img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+       		</a>
+			</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+	 {% if postsCounter < artist_categories.size %}<hr>{% endif %}
+
+
 	{% endfor %}
 
  <p id="demo"></p>
@@ -55,3 +82,8 @@ layout: default
 <script type="text/javascript" src="{{site.baseurl}}/assets/magnific.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/assets/instafeed.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/assets/custom.js"></script>
+
+
+<script type="text/javascript">
+
+</script>

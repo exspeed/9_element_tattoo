@@ -7,7 +7,7 @@ $(document).ready(function() {
         var token = element.getAttribute("token");
         var userid = element.getAttribute("userid");
         var elementID = element.getAttribute("id");
-        var tag = element.getAttribute("tag");
+        //var tag = element.getAttribute("tag");
 
         var lastMatchImages = 0;
         var feedcall = 0;
@@ -23,20 +23,27 @@ $(document).ready(function() {
         template: '<div class="col-lg-4 instaimg"><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
         
         filter : function(image) {
-            if(image.tags.indexOf(tag) >= 0 && lastMatchImages < maxlimit){
+            if( lastMatchImages < maxlimit){
                 lastMatchImages++;
                 return true;
             }
             return false;
         },
-        after: function() {
+        /*
+        after: function() { // useful if IG is live
             if(lastMatchImages < maxlimit){
                 if(this.hasNext()){
                     feedcall++;
                     feed.next();
                 }
             }
-        }
+        },*/
+        
+        success: function(response) {
+        response.data = response.data.filter(function(e){
+          return e.type === 'image';
+        });
+        },
         });
 
         feed.run();

@@ -2,9 +2,7 @@
 layout: artist
 title: Jim Tran
 feature_image:
-profile_picture: /assets/images/jimtran_profile_pic.jpg
-ig_handle: jimtran_
-
+profile_picture: /assets/images/jimtran/jimtran_profile_pic.jpg
 ---
 Lorem ipsum turpis mauris sodales proin sagittis, non urna massa platea sit, lorem enim lobortis porta taciti platea donec nibh tempus venenatis enim condimentum, in ut egestas consequat feugiat metus, tempus vestibulum fusce curabitur aliquam.
 
