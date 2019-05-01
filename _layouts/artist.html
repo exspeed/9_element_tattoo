@@ -24,18 +24,18 @@ layout: default
 
     <h1> {{ page.title }} </h1>
 	<div class="row">
-		<div class="col-lg-4">
-			<img src="{{ site.baseurl }}{{ page.profile_picture }}" alt="{{ page.profile_picture }}"/>
+		<div class="col-lg-4" >
+			<img src="{{ site.baseurl }}{{ page.profile_picture }}" style="margin-top: 24px" alt="{{ page.profile_picture }}"/>
 		</div>
-		<div class="col-lg-8">
+		<div class="col-lg-8" >
 			{{ content }}
 		</div>
 	</div>
 
     <hr>
-    
- 	<h2> Recent Work </h2> 
- 	<a name=recentwork></a>
+
+   	<a name=recentwork></a>
+ 	<h2 style="margin-bottom: 24px"> Recent Work </h2> 
 
  	 {% for username in ighandles %}
 		<div id="instafetch-{{ username.userID }}"  class="row gallery" userid={{username.userID}} 
@@ -46,7 +46,7 @@ layout: default
 	
 	{% for art in artist_categories%}
 	<a name={{ art[0]| remove: " "}} ></a>
-	<h2> {{ art[0]}} </h2>
+	<h2 style="margin-bottom: 24px"> {{ art[0]}} </h2>
 	 {% assign postsCounter = postsCounter | plus: 1 %}
 
 	<div class="row gallery" >
