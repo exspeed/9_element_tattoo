@@ -1,0 +1,18 @@
+{% for artist in site.artist %}
+	{% if artist[0] == page.title %}
+		{% assign artist_categories = artist[1] %}
+	{% endif %}
+{% endfor %}
+
+<nav class="nav  nav--categories">
+  <ul class="list  list--categories">
+  	<li class="item  item--category">
+        <a href="#recentwork"}}">Recent Work</a>
+      </li>
+    {% for item in artist_categories %}
+      <li class="item  item--category">
+        <a href="#{{ item[0] | remove: " "}}">{{ item[0] }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -20,6 +20,7 @@ body {
 .footer {
   .nav {
     text-align: right;
+
   }
   .container {
     @include flexbox;
@@ -29,15 +30,16 @@ body {
     @include breakpoint(break-1) {
       @include align-items(center);
     }
+
   }
 }
 
-.header .nav { //
+.header .nav { // list the header
   display: flex;
-  flex-direction: column-reverse;
   align-items: flex-end;
   justify-content: flex-end;
-  overflow: hidden;
+  overflow: scroll;
+  flex-shink: 0;
 }
 
 #front-page-nav-header {

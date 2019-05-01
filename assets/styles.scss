@@ -13,3 +13,11 @@ styles: true
 	-webkit-opacity:0.8;
 }
 
+#sitebar {
+    top: 0px;
+	position: sticky;
+	background: rgba(0,0,0,0.9);
+	//z-index: 1;
+
+}
+

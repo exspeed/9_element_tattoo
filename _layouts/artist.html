@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{% include site-header.html %}
 
 
 {% for user in site.instagram %}
@@ -16,9 +15,10 @@ layout: default
 	{% endif %}
 {% endfor %}
 
-
-
+{% include site-header.html %}
+<div style="overflow: scroll;">
 <main class="main container">
+
 
   <article class="article  article--page  container  typeset" >
 
@@ -32,12 +32,11 @@ layout: default
 		</div>
 	</div>
 
-
-
     <hr>
-
     
- 	<h2> Most Recent Work </h2> 
+ 	<h2> Recent Work </h2> 
+ 	<a name=recentwork></a>
+
  	 {% for username in ighandles %}
 		<div id="instafetch-{{ username.userID }}"  class="row gallery" userid={{username.userID}} 
 			token={{username.authToken}} tag={{tag[1]}}></div>
@@ -46,10 +45,11 @@ layout: default
 
 	
 	{% for art in artist_categories%}
+	<a name={{ art[0]| remove: " "}} ></a>
 	<h2> {{ art[0]}} </h2>
 	 {% assign postsCounter = postsCounter | plus: 1 %}
 
-	<div class="row gallery">
+	<div class="row gallery" >
 		{% for image in site.static_files %}
     		{% if image.path contains art[1] %}
 			<div class="col-lg-4 instaimg">
@@ -71,12 +71,12 @@ layout: default
 
   </article>
 
-  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
-
+  {% if page.aside == true %}{% include site-aside.html align="left"%}{% endif %}
 
 </main>
 
 {% include site-footer.html %}
+</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script type="text/javascript" src="{{site.baseurl}}/assets/magnific.min.js"></script>
