@@ -1,5 +1,4 @@
-<aside class="aside  typeset  aside--{{ include.align | default: 'right' }}">
-
+<aside class="aside  typeset  aside--{{ include.align | default: 'right' }}" style="scroll-behavior: smooth;">
   {% if page.layout == "post" %}
     <section class="section  section--related-posts">
       {% include post-related.html %}
@@ -24,5 +23,4 @@
       {% include nav-artist.html %}
     </section>
   {% endif %}
-
 </aside>

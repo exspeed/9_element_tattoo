@@ -42,32 +42,6 @@ navigation_header:
 navigation_footer:
   Back to top: "#top"
 
-artist:
-  Jim Tran:
-    Traditional Japanese: /assets/images/jimtran/japanese_style
-    Anime: /assets/images/jimtran/anime
-    Flowers: /assets/images/jimtran/flowers
-
-# My ID: 8272226300 : 8272226300.1a1fe6d.db5f8352648549ba99c3f4d50a40bbc2
-# Jim's Main ID: 224007036 // 224007036.1a1fe6d.6456fe915f7b4abca4122bd997ffac59
-# Jim's Side ID:  2366910688  // 2366910688.1a1fe6d.596788e12400416cb34aed74d1f0aa93
-
-# authenticate
-# https://api.instagram.com/oauth/authorize/?client_id=1a1fe6d7e0164df1b163173260a7debbD&redirect_uri=https://elfsight.com/service/generate-instagram-access-token/&response_type=token
-
-#Instagram
-instagram:
-  Jim Tran: 
-    ig_handle:
-      - jimtran_:
-        userID: 224007036
-        authToken: 224007036.1a1fe6d.6456fe915f7b4abca4122bd997ffac59
-      - jimtran_ll:
-        userID: 2366910688
-        authToken: 2366910688.1a1fe6d.596788e12400416cb34aed74d1f0aa93
-
-
-
 
 # Collections
 collections:

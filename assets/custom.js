@@ -41,7 +41,7 @@ $(document).ready(function() {
         
         success: function(response) {
         response.data = response.data.filter(function(e){
-          return e.type === 'image';
+          return e.type === 'image' || e.type =='carousel';
         });
         },
         });

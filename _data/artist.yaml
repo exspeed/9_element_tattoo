@@ -1,0 +1,69 @@
+# INSTAGRAM STUFF
+# My ID: 8272226300 : 8272226300.1a1fe6d.db5f8352648549ba99c3f4d50a40bbc2
+# Jim's Main ID: 224007036 // 224007036.1a1fe6d.6456fe915f7b4abca4122bd997ffac59
+# Jim's Side ID:  2366910688  // 2366910688.1a1fe6d.596788e12400416cb34aed74d1f0aa93
+# authenticate
+# https://api.instagram.com/oauth/authorize/?client_id=1a1fe6d7e0164df1b163173260a7debbD&redirect_uri=https://elfsight.com/service/generate-instagram-access-token/&response_type=token
+
+- name: Jim Tran
+  styles: 
+    Traditional Japanese: /assets/images/jimtran/japanese_style
+    Anime: /assets/images/jimtran/anime
+    Flowers: /assets/images/jimtran/flowers
+  profile_picture: /assets/images/jimtran/jimtran_profile_pic.jpg
+  instagram:
+    - jimtran_:
+      userID: 224007036
+      authToken: 224007036.1a1fe6d.6456fe915f7b4abca4122bd997ffac59
+    - jimtran_ll:
+      userID: 2366910688
+      authToken: 2366910688.1a1fe6d.596788e12400416cb34aed74d1f0aa93
+  job_title: Founder, tattoo artist
+  work_days: Mon, Tues, Wed, Thur, Fri
+
+- name: Melody Ng
+  styles: 
+    Geometric: /assets/images/jimtran/japanese_style
+    Realism: /assets/images/jimtran/anime
+  profile_picture: /assets/images/stockphotos/woman1.png
+  instagram:
+    - jimtran_:
+      userID: 224007036
+      authToken: 224007036.1a1fe6d.6456fe915f7b4abca4122bd997ffac59
+    - jimtran_ll:
+      userID: 2366910688
+      authToken: 2366910688.1a1fe6d.596788e12400416cb34aed74d1f0aa93
+  job_title: tattoo artist
+  work_days: Tues, Thur
+
+- name: Michael Graham
+  styles: 
+    Customs: /assets/images/jimtran/japanese_style
+    Feminine: /assets/images/jimtran/japanese_style
+  profile_picture: /assets/images/stockphotos/man1.png
+  instagram:
+    - jimtran_:
+      userID: 224007036
+      authToken: 224007036.1a1fe6d.6456fe915f7b4abca4122bd997ffac59
+    - jimtran_ll:
+      userID: 2366910688
+      authToken: 2366910688.1a1fe6d.596788e12400416cb34aed74d1f0aa93
+  job_title: tattoo artist
+  work_days: Mon, Tues, Thur
+
+- name: James Smith
+  styles: 
+    Customs: /assets/images/jimtran/japanese_style
+    Feminine: /assets/images/jimtran/japanese_style
+  profile_picture: /assets/images/stockphotos/man2.png
+  instagram:
+    - jimtran_:
+      userID: 224007036
+      authToken: 224007036.1a1fe6d.6456fe915f7b4abca4122bd997ffac59
+    - jimtran_ll:
+      userID: 2366910688
+      authToken: 2366910688.1a1fe6d.596788e12400416cb34aed74d1f0aa93
+  job_title: tattoo artist
+  work_days: Mon, Tues, Thur
+  
+

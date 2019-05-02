@@ -5,18 +5,19 @@ layout: default
 
 {% for user in site.instagram %}
 	{% if user[0] == page.title %}
-		{% assign ighandles = user[1].ig_handle %}
 	{% endif %}
 {% endfor %}
 
-{% for artist in site.artist %}
-	{% if artist[0] == page.title %}
-		{% assign artist_categories = artist[1] %}
+{% for person in site.data.artist %}
+	{% if person.name == page.title %}
+		{% assign artist_categories = person.styles %}
+		{% assign artist = person %}
+		{% assign ighandles = person.instagram %}
 	{% endif %}
 {% endfor %}
 
 {% include site-header.html %}
-<div style="overflow: scroll;">
+<div style="overflow: scroll; scroll-behavior: smooth;">
 <main class="main container">
 
 
@@ -25,7 +26,7 @@ layout: default
     <h1> {{ page.title }} </h1>
 	<div class="row">
 		<div class="col-lg-4" >
-			<img src="{{ site.baseurl }}{{ page.profile_picture }}" style="margin-top: 24px" alt="{{ page.profile_picture }}"/>
+			<img src="{{ site.baseurl }}{{ artist.profile_picture }}" style="margin-top: 24px" alt="{{ page.profile_picture }}"/>
 		</div>
 		<div class="col-lg-8" >
 			{{ content }}
@@ -37,7 +38,7 @@ layout: default
    	<a name=recentwork></a>
  	<h2 style="margin-bottom: 24px"> Recent Work </h2> 
 
- 	 {% for username in ighandles %}
+ 	{% for username in ighandles %}
 		<div id="instafetch-{{ username.userID }}"  class="row gallery" userid={{username.userID}} 
 			token={{username.authToken}} tag={{tag[1]}}></div>
 	{% endfor %}

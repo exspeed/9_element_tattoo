@@ -1,6 +1,51 @@
 ---
-layout: page
+layout: default
 title: Meet the Team
 ---
 
-I'm not sure yet what this website is about, but I'm sure I'll work it out soon.
+{% for person in site.data.artist %}
+	{% if person.name == page.title %}
+		{% assign artist_categories = person.styles %}
+		{% assign artist = person %}
+		{% assign ighandles = person.instagram %}
+	{% endif %}
+{% endfor %}
+
+{% include site-header.html %}
+<div style="overflow: scroll; scroll-behavior: smooth;">
+
+<main class="main container">
+
+
+  <article class="article  article--page    typeset" >
+
+    <h1> {{ page.title }} </h1>
+
+	<div class="container--artist">
+		{% for person in site.data.artist %}
+     	 <div class="container card">
+     	 <a href="{{site.baseurl}}/tattoos/{{person.name|remove:' '}}">
+			<img src="{{ site.baseurl }}{{person.profile_picture}}" style="padding-top: 1rem" alt="profile_picture" >
+		</a>
+     	  <h2>{{ person.name }} </h2>
+
+      	  <p> Position: {{person.job_title}} <br>
+       	   Styles: {% for genre in person.styles %}{{ genre[0]}}{% if forloop.last == false %}, {% endif %}
+       	   {% endfor %} <br>
+       	   Work Days: {{person.work_days}}</p>
+
+     	  <a href="{{site.baseurl}}/tattoos/{{person.name|remove:' '}}" class="button"> Profile </a>
+    	  </div>			
+		{% endfor %}
+	</div>
+
+ 	<p id="demo"></p>
+
+
+  </article>
+
+
+</main>
+
+{% include site-footer.html %}
+</div>
