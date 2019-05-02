@@ -1,0 +1,45 @@
+---
+layout: default
+title: Booking and Contact
+
+---
+
+{% assign store = site.data.store %}
+
+{% include site-header.html %}
+
+<div style="overflow: scroll; scroll-behavior: smooth;">
+<main class="main container">
+
+
+  <article class="article  article--page  container  typeset" >
+   
+   	<h2>Location</h2>
+ 	<div class="container card">
+		<img src="{{ site.baseurl}}/assets/images/stockphotos/location.png" style="padding-top: 1rem" alt="profile_picture" >
+      	  <p> Location: {{store.location}} <br>
+       	   Phone: {{store.phone}} <br>
+     	   Email: {{store.email}} <br>
+       	   Hours: {{store.hours}}</p>
+
+    </div>	
+	
+	<h2> {{ page.title }} </h2>
+
+	{% include map.html id="15IdOXjJuo3ttjSZ2SGKJI6suNvoXndN-" title="Toys R Us map" %}
+
+	{% include site-form.html %}
+
+ 	<p id="demo"></p>
+
+
+  </article>
+
+  {% if page.aside == true %}{% include site-aside.html align="left"%}{% endif %}
+
+</main>
+
+{% include site-footer.html %}
+</div>
+
+

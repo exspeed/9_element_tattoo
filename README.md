@@ -15,8 +15,6 @@ MEET THE TEAM PAGE
 
 BOOKING PAGE
 
-FAQ
-
-NEWS 
+NEWS
 
 FIX NAVBAR - mobile expirence
