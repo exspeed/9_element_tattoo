@@ -31,8 +31,7 @@ styles: true
   border-radius: 4px;
   @include flexbox;
   @include align-items(center);
-  padding: 0px 12px; // 
-  margin: 0px 6px;
+
 }
 
 
@@ -50,11 +49,11 @@ styles: true
 // MEET THE TEAM 
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: .8rem 0;
+//  box-shadow:  4px 8px 0 rgba(0, 0, 0, 0.2);
   background: #16181D;
   opacity: 0.8;
   flex-basis: 30%;
+  padding: 1rem;
 
 }
 
@@ -66,3 +65,23 @@ styles: true
 	justify-content: space-evenly;
 	}	
 }
+
+@media(min-width: 800px){
+.container--store-info {
+	display: flex;
+	flex-direction: row;
+	.store-info{
+		flex: 1;
+		order: 1;
+		margin-right: 1.5rem;
+
+	}
+	.store-s{
+		flex: 2;
+		order: 2;
+	}
+}
+
+}
+
+

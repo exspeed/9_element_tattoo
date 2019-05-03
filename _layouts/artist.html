@@ -2,12 +2,6 @@
 layout: default
 ---
 
-
-{% for user in site.instagram %}
-	{% if user[0] == page.title %}
-	{% endif %}
-{% endfor %}
-
 {% for person in site.data.artist %}
 	{% if person.name == page.title %}
 		{% assign artist_categories = person.styles %}

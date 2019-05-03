@@ -10,7 +10,7 @@ body {
 
 .container {
   width: 95%;
- //max-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -39,6 +39,28 @@ body {
   justify-content: flex-end;
   overflow: scroll;
   flex-shink: 0;
+
+  li{
+   position: relative;
+   margin: 0 1em;
+  }
+
+  a::before{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: $hoverColour;
+    position: absolute;
+    bottom: 10px;
+
+    transition: all ease-in-out 250ms;
+  }
+
+  a:hover::before{
+    width: 100%;
+  }
+
 }
 
 #front-page-nav-header {
@@ -200,7 +222,6 @@ body {
 .item {
   &--nav {
     @include breakpoint(break-1) {
-      margin-left: .4rem;
       display: inline-block;
     }
     &:first-of-type {
