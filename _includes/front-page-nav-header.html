@@ -10,7 +10,18 @@
       {% endif %}
 
       <li class="item  item--nav{% if item[1] == page.url %}  item--current{% endif %}">
-        <a href="{{ url }}">{{ item[0] }}</a>
+        {% if item[0] == "Tattoos" %}
+          <div class="dropdown">
+            <a href="{{ url }}">{{ item[0] }}</a>
+            <div class="dropdown-content">
+              {% for artist in site.data.artist %}
+                <a href="{{site.baseurl}}/tattoos/{{artist.name|remove:' '}}">{{artist.name}}</a>
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <a href="{{ url }}">{{ item[0] }}</a>
+        {% endif %}
       </li>
 
     {% endfor %}

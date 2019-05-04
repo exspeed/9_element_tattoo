@@ -5,13 +5,20 @@ styles: true
 
 @import "alembic";
 
+// OVERRIDE BOOTSTRAP 
+.btn {
+	color: $white !important;
+}
 
+// INSTAGRAM STUFF
 .instaimg img {margin-bottom:30px;}
 .instaimg img:hover {
 	opacity:0.8;
 	-moz-opacity:0.8;
 	-webkit-opacity:0.8;
 }
+
+// HEADER STUFF
 
 #sitebar {
     top: 0px;
@@ -23,8 +30,8 @@ styles: true
 }
 
 
-.header a {
-  color: white;
+.header > a {
+  color: green;
   text-align: center;
   text-decoration: none;
   line-height: 74px; // should be larger than logo size
@@ -41,17 +48,50 @@ styles: true
 }
 
 .header a.active {
-  background-color: dodgerblue;
-  color: white;
 }
 
 
-// MEET THE TEAM 
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  float: none;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  padding: 2px 16px;
+  font-size: .8em;
+  background: #16181D;
+
+}
+.dropdown-content a::before{
+    width: 0% !important;
+ }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown-content a:hover {
+	opacity: 0.9;
+}
+
+
+
+// MEET THE TEAM PAGE
 
 .card {
 //  box-shadow:  4px 8px 0 rgba(0, 0, 0, 0.2);
   background: #16181D;
-  opacity: 0.8;
+  opacity: 0.9;
   flex-basis: 30%;
   padding: 1rem;
 
@@ -65,6 +105,8 @@ styles: true
 	justify-content: space-evenly;
 	}	
 }
+
+// CONTACT PAGE
 
 @media(min-width: 800px){
 .container--store-info {
@@ -83,5 +125,37 @@ styles: true
 }
 
 }
+
+// Event Page
+@media(min-width: 800px){
+.container--event-info{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+
+	.event-info {
+		flex: 1;
+		order: 2;
+		padding-left: 2rem;
+	}
+}
+}
+
+.container--event-info{
+	margin-bottom: 1rem;
+}
+
+
+.event-img{
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+
+
 
 

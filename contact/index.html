@@ -23,7 +23,7 @@ title: Booking and Contact
       	  <p> Location: {{store.location}} <br>
        	   Phone: {{store.phone}} <br>
      	   Email: {{store.email}} <br>
-     	   Hours: <br>{% for day in store.hours %}&emsp;{{day[0]}} {{day[1]}}<br>
+     	   Hours:<br>{% for day in store.hours %}&emsp;{{day[0]}}: {{day[1]}}<br>
        	   {% endfor %}
        	</p>
 		</div>
@@ -31,7 +31,7 @@ title: Booking and Contact
 	
 	<h2> Map </h2>
 
-	<div class="container">
+	<div class="container card">
 	{% include map.html id="15IdOXjJuo3ttjSZ2SGKJI6suNvoXndN-" title="Toys R Us map" %}
 	</div>
 

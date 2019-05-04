@@ -1,0 +1,71 @@
+---
+layout: default
+title: Booking and Contact
+
+---
+
+{% assign conventions = site.data.conventions %}
+
+{% include site-header.html %}
+
+<div style="overflow: scroll; scroll-behavior: smooth;">
+<main class="main container">
+
+
+  <article class="article  article--page  container  typeset" >
+   
+   	<h2>Upcoming</h2>
+	{% for event in conventions %}
+	<div class="container--event-info">
+		<div class="event-img">
+			<img src="{{ site.baseurl}}{{event.showcase_img}}"  alt="profile_picture" >
+			<button type="button" class="btn btn-dark" style="margin-top: .8rem;">book appointment</button>
+
+		</div>
+		<div class="event-info">
+			<h3>{{event.name}}</h3>
+			<ul>
+				<li>Date: {{event.start_date}}</li>
+				<li>Artists: {{event.artists}}</li>			
+				<li>Address: {{event.address}}</li>			
+				<li>Website: <a href="{{event.website}}" style="word-wrap : break-word;">{{event.website}}</a></li>						
+			</ul>
+		</div>
+	</div>
+	{% endfor %}
+	<h2> Past Convention </h2>
+
+	
+  </article>
+
+
+</main>
+{% include site-footer.html %}
+
+</div>
+
+<script type="text/javascript">
+function getCompareDate() { 
+  var d = new Date(), 
+      month = '' + (d.getMonth() + 1), 
+      day = '' + d.getDate(), 
+      year = d.getFullYear(); 
+  if (month.length < 2) month = '0' + month; 
+  if (day.length < 2) day = '0' + day; 
+  return [year, month, day].join(''); 
+} 
+
+$('[future-date]').each(function() { 
+  if($(this).attr('future-date') < getCompareDate()) $(this).hide(); 
+});
+
+/*
+{% for item in site.events %} 
+  <div future-date="{{ item.date | date: '%Y%m%d' }}">...</div> 
+{% endfor %}
+*/
+
+</script>
+
+
+
