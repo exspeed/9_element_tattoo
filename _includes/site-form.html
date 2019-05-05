@@ -22,7 +22,7 @@
   <fieldset class="fieldset  form__fieldset">
     <legend class="legend form__legend">{{ name }}</legend>
     <label class="label" for="name--{{ name_id }}">Name: <span class="required">*</span></label>
-    <input class="input" id="name--{{ name_id }}" type="text" name="name" value="" placeholder="Your Name" required="required" />
+    <input class="input" id="name--{{ name_id }}" type="text" name="name" value="" placeholder="Your Full Name" required="required" />
 
     <label class="label" for="email--{{ name_id }}">Email Address: <span class="required">*</span></label>
     <input class="input" id="email--{{ name_id }}" type="email" name="email" value="" placeholder="email@website.com" required="required" />
@@ -38,7 +38,7 @@
     {% if include.start_date %}
     <label class="label" for="appointment--{{ name_id }}">Select date of appointment: <span class="required">*</span></label>
     <div id="radiobuttons">
-      
+
     </div>
 
     {% endif %}

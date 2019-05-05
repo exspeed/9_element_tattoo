@@ -1,6 +1,6 @@
 - name: Dragon City
-  start_date: 2019-04-19 #YYYY-MM-DD
-  end_date: 2019-04-23
+  start_date: 2019-05-19 #YYYY-MM-DD
+  end_date: 2019-05-23
   address: Centro de Convenciones Plaza Mayor, Medellín, Antioquia, Colombia
   artists: Jim Tran, Melody Ng
   website: https://www.facebook.com/pg/Expotatuajemedellincol/about/?ref=page_internal
@@ -15,8 +15,8 @@
   showcase_img: /assets/images/stockphotos/convention2.png
 
 - name: EMPIRE STATE TATTOO EXPO
-  start_date: 2018-05-02 #YYYY-MM-DD
-  end_date: 2018-05-04
+  start_date: 2018-05-12 #YYYY-MM-DD
+  end_date: 2018-05-13
   address: 1335 Avenue of the Americas, New York, NY 10606
   artists: Michael Graham
   website: https://www.hawaiitattooexpo.com/

@@ -14,14 +14,16 @@ title: Booking and Contact
 
   <article class="article  article--page  container  typeset" >
    
-   	<h1>Upcoming Conventions</h1>
+   	<h2>Upcoming Conventions</h2>
 	{% for event in conventions %}
+	<div id="event-{{ event.end_date | date: '%Y%m%d' }}" event-end="{{event.end_date}}"> 
+
 	<div class="container--event-info">
 		<div class="event-img">
 			<a href="{{event.website}}">
 			<img src="{{ site.baseurl}}{{event.showcase_img}}"  alt="profile_picture" >
 			</a>
-			<button id="bookbtn" type="button" class="btn btn-dark" style="margin-top: .8rem;" start_date="{{event.start_date}}" end_date="{{event.end_date}}" name="{{event.name}}" artists="{{event.artists}}" showcase_img="{{event.showcase_img}}"
+			<button id="bookbtn" type="button" class="btn btn-dark" style="margin-top: .6rem; width: 200px;" start_date="{{event.start_date}}" end_date="{{event.end_date}}" name="{{event.name}}" artists="{{event.artists}}" showcase_img="{{event.showcase_img}}"
 
 			>book appointment</button>
 
@@ -37,9 +39,9 @@ title: Booking and Contact
 		</div>
 
 	</div>
+	</div>
 
 	{% endfor %}
-	<h2> Past Convention </h2>
 
   </article>
 
@@ -51,26 +53,6 @@ title: Booking and Contact
 
 <script type="text/javascript">
 
-/*
-function getCompareDate() { 
-  var d = new Date(), 
-      month = '' + (d.getMonth() + 1), 
-      day = '' + d.getDate(), 
-      year = d.getFullYear(); 
-  if (month.length < 2) month = '0' + month; 
-  if (day.length < 2) day = '0' + day; 
-  return [year, month, day].join(''); 
-} 
-
-$('[future-date]').each(function() { 
-  if($(this).attr('future-date') < getCompareDate()) $(this).hide(); 
-});
-*/
-/*
-{% for item in site.events %} 
-  <div future-date="{{ item.date | date: '%Y%m%d' }}">...</div> 
-{% endfor %}
-*/
 
 function passDateToBooking(button_element, start_date, end_date, artists, name,showcase_img){
 	button_element.addEventListener('click', function(){
@@ -85,6 +67,24 @@ function passDateToBooking(button_element, start_date, end_date, artists, name,s
 }
 
 const init = function(e){
+
+	let eventdates = document.querySelectorAll("[id^='event']");
+	let showPass = 0;
+	
+	for(var i = 0; i < eventdates.length; i++){
+		var date = eventdates[i].getAttribute('event-end').replace(/-/g, '');
+		
+		if(date < getCompareDate()){
+			if(!showPass){
+				eventdates[i].innerHTML = '<h2>Past Conventions</h2>' + eventdates[i].innerHTML;;
+				showPass = 1;
+			}
+			var button = eventdates[i].querySelector("#bookbtn")
+			button.innerHTML="Finished";
+			button.disabled=true;
+		}
+	}
+	
 	let btn = document.querySelectorAll("#bookbtn");
 	for(var i = 0; i < btn.length; i++){
 		var date = btn[i].getAttribute("start_date");
@@ -95,14 +95,23 @@ const init = function(e){
 
 		passDateToBooking(btn[i], date, end_date , artists, name,showcase_img);
 	}
-
+	
 };
-
-   
 
 document.addEventListener('DOMContentLoaded', function(){
 	init();
 });
+
+function getCompareDate() { 
+  var d = new Date(), 
+      month = '' + (d.getMonth() + 1), 
+      day = '' + d.getDate(), 
+      year = d.getFullYear(); 
+  if (month.length < 2) month = '0' + month; 
+  if (day.length < 2) day = '0' + day; 
+  return [year, month, day].join(''); 
+} 
+
 
 </script>
 

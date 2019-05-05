@@ -11,8 +11,8 @@ or
 
 TODO:
 
-[] IN Events.html: Move pass events to Pass Convention
-[] IN event/Book.html ADD DATE radio box 
+[X] IN Events.html: Move pass events to Pass Convention
+[X] IN event/Book.html ADD DATE radio box 
 [] Resize label in Book.html
 [] In Tattoo/index.html put Profile button at bottom + fix margins
 [] FIX MOBILE EXPERIENCE
