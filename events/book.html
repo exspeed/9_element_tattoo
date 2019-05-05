@@ -1,0 +1,60 @@
+---
+layout: default
+title: Convention Booking
+
+---
+
+{% assign conventions = site.data.conventions %}
+
+{% include site-header.html %}
+
+<div style="overflow: scroll; scroll-behavior: smooth;">
+<main class="main container">
+
+
+  <article class="article  article--page  container  typeset" >
+   	<h1 id="item"> HELOO</h1>
+	{% include site-form.html %}
+
+  </article>
+
+
+</main>
+
+</div>
+
+<script type="text/javascript">
+	
+const init = function(e){
+	let header = document.querySelector("#item");
+	let start_date = localStorage.getItem('start_date');
+	let name = localStorage.getItem('name');
+	let artists = localStorage.getItem('artists');
+	let showcase_img = localStorage.getItem('showcase_img');
+
+	header.innerHTML = start_date + " " + name + " " + " " + showcase_img;
+
+	let dropdown = document.querySelector("#artist-form-dropdown");
+	var length = dropdown.options.length;
+	var arr = [];
+	for(var i = 0; i < length ; i++){	
+		if(!artists.includes(dropdown.options[i].value)){
+			arr.push(i);
+		}
+	}
+	for(var i = arr.length -1; i >= 0; i--){
+		dropdown.options.remove(arr[i]); // add Any??
+	}
+
+};
+
+   
+document.addEventListener('DOMContentLoaded', function(){
+	init();
+});
+
+
+</script>
+
+
+

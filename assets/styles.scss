@@ -59,6 +59,8 @@ styles: true
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 
+
+
 }
 
 .dropdown-content a {
@@ -70,6 +72,8 @@ styles: true
   font-size: .8em;
   background: #16181D;
 
+  
+
 }
 .dropdown-content a::before{
     width: 0% !important;
@@ -77,6 +81,7 @@ styles: true
 
 .dropdown:hover .dropdown-content {
   display: block;
+
 }
 
 
@@ -155,6 +160,10 @@ styles: true
 	flex-shrink: 0;
 }
 
+
+.siteform{
+	display: none;
+}
 
 
 

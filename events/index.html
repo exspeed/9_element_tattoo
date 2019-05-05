@@ -14,12 +14,16 @@ title: Booking and Contact
 
   <article class="article  article--page  container  typeset" >
    
-   	<h2>Upcoming</h2>
+   	<h1>Upcoming Conventions</h1>
 	{% for event in conventions %}
 	<div class="container--event-info">
 		<div class="event-img">
+			<a href="{{event.website}}">
 			<img src="{{ site.baseurl}}{{event.showcase_img}}"  alt="profile_picture" >
-			<button type="button" class="btn btn-dark" style="margin-top: .8rem;">book appointment</button>
+			</a>
+			<button id="bookbtn" type="button" class="btn btn-dark" style="margin-top: .8rem;" start_date="{{event.start_date}}" name="{{event.name}}" artists="{{event.artists}}" showcase_img="{{event.showcase_img}}"
+
+			>book appointment</button>
 
 		</div>
 		<div class="event-info">
@@ -31,11 +35,12 @@ title: Booking and Contact
 				<li>Website: <a href="{{event.website}}" style="word-wrap : break-word;">{{event.website}}</a></li>						
 			</ul>
 		</div>
+
 	</div>
+
 	{% endfor %}
 	<h2> Past Convention </h2>
 
-	
   </article>
 
 
@@ -45,6 +50,8 @@ title: Booking and Contact
 </div>
 
 <script type="text/javascript">
+
+/*
 function getCompareDate() { 
   var d = new Date(), 
       month = '' + (d.getMonth() + 1), 
@@ -58,12 +65,44 @@ function getCompareDate() {
 $('[future-date]').each(function() { 
   if($(this).attr('future-date') < getCompareDate()) $(this).hide(); 
 });
-
+*/
 /*
 {% for item in site.events %} 
   <div future-date="{{ item.date | date: '%Y%m%d' }}">...</div> 
 {% endfor %}
 */
+
+function passDateToBooking(button_element, start_date, artists, name,showcase_img){
+	button_element.addEventListener('click', function(){
+		localStorage.setItem('start_date', start_date);
+		localStorage.setItem('artists', artists);
+		localStorage.setItem('name', name);
+		localStorage.setItem('showcase_img', showcase_img);
+
+		window.document.location = "./book";
+	});
+}
+
+const init = function(e){
+	let btn = document.querySelectorAll("#bookbtn");
+	for(var i = 0; i < btn.length; i++){
+		var date = btn[i].getAttribute("start_date");
+		var artists = btn[i].getAttribute("artists");
+		var name = btn[i].getAttribute("name");
+		var showcase_img = btn[i].getAttribute("showcase_img");
+
+		console.log("HELOSO " + artists);
+
+		passDateToBooking(btn[i], date, artists, name,showcase_img);
+	}
+
+};
+
+   
+
+document.addEventListener('DOMContentLoaded', function(){
+	init();
+});
 
 </script>
 
