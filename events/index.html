@@ -31,8 +31,16 @@ title: Booking and Contact
 		<div class="event-info">
 			<h3>{{event.name}}</h3>
 			<ul>
+				<!-- --> 
 				<li>Date: {{event.start_date | date:"%b %d"}} - {{event.end_date | date: "%b %d %Y"}}</li>
-				<li>Artists: {{event.artists}}</li>			
+				<li>Artists: 
+					{% assign all_artist =  event.artists | split: ", " %}
+					{% for artist in all_artist %}
+	                	<a href="{{site.baseurl}}/tattoos/{{artist|remove:' '}}">{{artist}}{
+	                		% if forloop.last == false %},{% endif %}
+						</a>
+					{% endfor %}
+				</li>			
 				<li>Address: {{event.address}}</li>			
 				<li>Website: <a href="{{event.website}}" style="word-wrap : break-word;">{{event.website}}</a></li>						
 			</ul>
