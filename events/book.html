@@ -14,8 +14,7 @@ title: Convention Booking
 
   <article class="article  article--page  container  typeset" >
    	<h1 id="item"> HELOO</h1>
-	{% include site-form.html %}
-
+	{% include site-form.html start_date=true %}
   </article>
 
 
@@ -26,25 +25,57 @@ title: Convention Booking
 <script type="text/javascript">
 	
 const init = function(e){
+	// RETRIEVE 
 	let header = document.querySelector("#item");
 	let start_date = localStorage.getItem('start_date');
+	let end_date = localStorage.getItem('end_date');
 	let name = localStorage.getItem('name');
 	let artists = localStorage.getItem('artists');
 	let showcase_img = localStorage.getItem('showcase_img');
 
-	header.innerHTML = start_date + " " + name + " " + " " + showcase_img;
 
+	header.innerHTML = start_date + " " + end_date + " " +  name + " " + showcase_img;
+
+	// ADD ARTIST DROP DOWN
 	let dropdown = document.querySelector("#artist-form-dropdown");
 	var length = dropdown.options.length;
 	var arr = [];
 	for(var i = 0; i < length ; i++){	
-		if(!artists.includes(dropdown.options[i].value)){
+		if(!artists.includes(dropdown.options[i].value) && dropdown.options[i].value != "Any"){
 			arr.push(i);
 		}
 	}
 	for(var i = arr.length -1; i >= 0; i--){
-		dropdown.options.remove(arr[i]); // add Any??
+		dropdown.options.remove(arr[i]); 
 	}
+
+	// ADD DATE RADIO BUTTON
+	let radio = document.querySelector("#radiobuttons");
+	let date1 = new Date(start_date);
+	date1.setDate(date1.getDate() + 1); // starts 1 day before. Add 1 to adjust. 
+	let date2 = new Date(end_date);
+	date2.setDate(date2.getDate() + 1);
+
+	const days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat'];
+	const monthNames = ["January", "February", "March", "April", "May", "June",
+  		"July", "August", "September", "October", "November", "December"];
+	console.log(date1);
+	console.log(date2);
+	for( var i = date1; date1 <= date2; i.setDate(i.getDate() + 1) ){
+		var dd = String(i.getDate()).padStart(2, '0');
+		var mm = String(i.getMonth() + 1).padStart(2, '0'); //January is 0!
+		var yyyy = i.getFullYear();		
+		var dayName = days[i.getDay()];
+		var month = monthNames[i.getMonth()];
+
+		var radioHtml = '<input type="radio" name="date"/> ';
+    	radioHtml += dayName + ', ' + dd + ' ' + month + ' ' + yyyy + '<br>';
+    	radio.innerHTML += radioHtml;
+	}
+
+	
+	
+	
 
 };
 

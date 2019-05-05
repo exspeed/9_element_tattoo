@@ -21,7 +21,7 @@ title: Booking and Contact
 			<a href="{{event.website}}">
 			<img src="{{ site.baseurl}}{{event.showcase_img}}"  alt="profile_picture" >
 			</a>
-			<button id="bookbtn" type="button" class="btn btn-dark" style="margin-top: .8rem;" start_date="{{event.start_date}}" name="{{event.name}}" artists="{{event.artists}}" showcase_img="{{event.showcase_img}}"
+			<button id="bookbtn" type="button" class="btn btn-dark" style="margin-top: .8rem;" start_date="{{event.start_date}}" end_date="{{event.end_date}}" name="{{event.name}}" artists="{{event.artists}}" showcase_img="{{event.showcase_img}}"
 
 			>book appointment</button>
 
@@ -72,9 +72,10 @@ $('[future-date]').each(function() {
 {% endfor %}
 */
 
-function passDateToBooking(button_element, start_date, artists, name,showcase_img){
+function passDateToBooking(button_element, start_date, end_date, artists, name,showcase_img){
 	button_element.addEventListener('click', function(){
 		localStorage.setItem('start_date', start_date);
+		localStorage.setItem('end_date', end_date);
 		localStorage.setItem('artists', artists);
 		localStorage.setItem('name', name);
 		localStorage.setItem('showcase_img', showcase_img);
@@ -90,10 +91,9 @@ const init = function(e){
 		var artists = btn[i].getAttribute("artists");
 		var name = btn[i].getAttribute("name");
 		var showcase_img = btn[i].getAttribute("showcase_img");
+		var end_date = btn[i].getAttribute("end_date");
 
-		console.log("HELOSO " + artists);
-
-		passDateToBooking(btn[i], date, artists, name,showcase_img);
+		passDateToBooking(btn[i], date, end_date , artists, name,showcase_img);
 	}
 
 };

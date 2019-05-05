@@ -11,10 +11,13 @@ or
 
 TODO:
 
-MEET THE TEAM PAGE
+[] IN Events.html: Move pass events to Pass Convention
+[] IN event/Book.html ADD DATE radio box 
+[] Resize label in Book.html
+[] In Tattoo/index.html put Profile button at bottom + fix margins
+[] FIX MOBILE EXPERIENCE
 
-BOOKING PAGE
 
-NEWS
-
-FIX NAVBAR - mobile expirence
+[] Add animation to dropdown menu
+[] Set active header 
+[] IN contact.html add slideshow of store

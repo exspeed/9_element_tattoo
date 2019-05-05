@@ -12,6 +12,7 @@
   {% assign thanks_url = "/thanks/" %}
 {% endif %}
 
+
 <form class="form  form--{{ name_id }}" method="post" name="{{ name }}" action="{{ thanks_url }}"
   {% if include.netlify_form %}
     netlify-honeypot="bot-field"
@@ -25,19 +26,24 @@
 
     <label class="label" for="email--{{ name_id }}">Email Address: <span class="required">*</span></label>
     <input class="input" id="email--{{ name_id }}" type="email" name="email" value="" placeholder="email@website.com" required="required" />
-    <label class="label" for="email--{{ name_id }}">Select Artist: <span class="required">*</span></label>
+    <label class="label" for="artist--{{ name_id }}">Select Artist: <span class="required">*</span></label>
 
     <select id="artist-form-dropdown" class="input">
-      <option value="none">Any</option>
-      {% if include.artist  %} <!-- split by COMMA -->
-      {% else %}
+      <option value="Any">Any</option>
         {% for artist in site.data.artist %}
           <option value="{{artist.name}}">{{artist.name}}</option>
         {% endfor %}
-      {% endif %}
     </select>
 
-    <label class="label" for="message--{{ name_id }}">Message: <span class="required">*</span></label>
+    {% if include.start_date %}
+    <label class="label" for="appointment--{{ name_id }}">Select date of appointment: <span class="required">*</span></label>
+    <div id="radiobuttons">
+      
+    </div>
+
+    {% endif %}
+
+    <label class="label" for="message--{{ name_id }}">Tattoo Detail: <span class="required">*</span></label>
     <textarea class="textarea" id="message--{{ name_id }}" name="message" placeholder="Your message..." required="required"></textarea>
 
     <input class="button" type="submit" value="Send message" />
