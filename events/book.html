@@ -12,8 +12,9 @@ title: Convention Booking
 <main class="main container">
 
 
-  <article class="article  article--page  container  typeset" >
-   	<h1 id="item"> HELOO</h1>
+  <article class="article  article--page  content  typeset" >
+   	<h1 id="header"></h1>
+   	<p id="warning"></p>
 	{% include site-form.html start_date=true %}
   </article>
 
@@ -26,15 +27,17 @@ title: Convention Booking
 	
 const init = function(e){
 	// RETRIEVE 
-	let header = document.querySelector("#item");
 	let start_date = localStorage.getItem('start_date');
 	let end_date = localStorage.getItem('end_date');
 	let name = localStorage.getItem('name');
 	let artists = localStorage.getItem('artists');
 	let showcase_img = localStorage.getItem('showcase_img');
 
+	let header = document.querySelector("#header");
+	header.innerHTML = name;
 
-	header.innerHTML = start_date + " " + end_date + " " +  name + " " + showcase_img;
+	let warning = document.querySelector("#warning");
+	warning.innerHTML = "APPOINTMENTS FOR " + name.toUpperCase() + " EXPO ONLY.";
 
 	// ADD ARTIST DROP DOWN
 	let dropdown = document.querySelector("#artist-form-dropdown");

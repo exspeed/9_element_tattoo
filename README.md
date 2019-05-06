@@ -17,8 +17,9 @@ TODO:
 [X] In event.html: add link to artist page
 
 
-[] Resize label in Book.html
-[] In Tattoo/index.html put Profile button at bottom + fix margins
+[X] In Tattoo/index.html put Profile button at bottom + fix margins
+[X] Resize label in Book.html
+[] add social media icon to layout/artist.html --> tattoo/JimTran
 [] FIX MOBILE EXPERIENCE
 
 

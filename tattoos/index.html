@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Meet the Team
+title: Meet the Artists
 ---
 
 {% for person in site.data.artist %}
@@ -17,16 +17,20 @@ title: Meet the Team
 <main class="main container">
 
 
-  <article class="article  article--page    typeset" >
+  <article class="article  article--page typeset" >
 
     <h1> {{ page.title }} </h1>
 
 	<div class="container--artist">
 		{% for person in site.data.artist %}
      	 <div class="container card">
+       <div class="card-container">  
+        <div class="img-flex">
      	 <a href="{{site.baseurl}}/tattoos/{{person.name|remove:' '}}">
-			<img src="{{ site.baseurl }}{{person.profile_picture}}"  alt="profile_picture" >
+			<img src="{{ site.baseurl }}{{person.profile_picture}}" style="border-radius: 10px;" alt="profile_picture" >
 		</a>
+        </div>
+        <div class="info-flex">
      	  <h2>{{ person.name }} </h2>
 
       	  <p> Position: {{person.job_title}} <br>
@@ -34,7 +38,11 @@ title: Meet the Team
        	   {% endfor %} <br>
        	   Work Days: {{person.work_days}}</p>
 
-     	  <a href="{{site.baseurl}}/tattoos/{{person.name|remove:' '}}" class="button"> Profile </a>
+        </div>
+        <div class="button-flex">
+      	  <a href="{{site.baseurl}}/tattoos/{{person.name|remove:' '}}" class="btn btn-dark" style="width:100%"> Profile </a>
+        </div>
+      </div>
     	  </div>			
 		{% endfor %}
 	</div>
