@@ -1,0 +1,28 @@
+<div class="logo">LOGO</div>
+<nav >
+	<ul>
+	 {% for item in site.navigation_header %}
+        {% assign url = item[1] | relative_url %}
+        {% if item[0] == "Tattoos" %}
+   		<li class="sub-menu"><a href="{{ url }}" > {{item[0]}} </a>
+
+			<ul>
+        	{% for artist in site.data.artist %}
+        		<li><a href="{{site.baseurl}}/tattoos/{{artist.name|remove:' '| downcase }}">{{artist.name}}</a></li>
+		 	{% endfor %}
+			</ul>
+		</li>
+		{% else %}
+		 <li><a href="{{ url }}" > {{item[0]}} </a>
+
+        {% endif %}
+
+	 {% endfor %}
+
+</ul>
+
+</nav>
+
+ <button class="button menu-toggle" aria-label="Menu toggle">
+    {% include icon.html id="nav" title="Menu" %}
+ </button>

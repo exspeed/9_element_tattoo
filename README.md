@@ -21,8 +21,10 @@ TODO:
 [X] Resize label in Book.html
 [] add social media icon to layout/artist.html --> tattoo/JimTran
 [] FIX MOBILE EXPERIENCE
+	- front-page-header. 
 
 
 [] Add animation to dropdown menu
 [] Set active header 
 [] IN contact.html add slideshow of store
+[] look into 'Back to top' footer

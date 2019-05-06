@@ -22,7 +22,7 @@
             </div>
           </div>
         {% else %}
-          <a href="{{ url }}">{{ item[0] }}</a>
+          <a style="background-color: blue;" href="{{ url }}">{{ item[0] }}</a>
         {% endif %}
       </li>
       
@@ -44,7 +44,7 @@
 
   // Hide nav and apply toggle
   const collapseNav = () => {
-    if (document.body.clientWidth < 640) {
+    if (document.body.clientWidth < 991) {
       navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
     } else {
       navList.removeAttribute('style')
