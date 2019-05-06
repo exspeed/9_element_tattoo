@@ -36,7 +36,7 @@ title: Booking and Contact
 				<li>Artists: 
 					{% assign all_artist =  event.artists | split: ", " %}
 					{% for artist in all_artist %}
-	                	<a href="{{site.baseurl}}/tattoos/{{artist|remove:' '}}">{{artist}}
+	                	<a href="{{site.baseurl}}/tattoos/{{artist|remove:' ' | downcase}}">{{artist}}
 	                		{% if forloop.last == false %},{% endif %}
 						</a>
 					{% endfor %}
