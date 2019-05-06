@@ -17,7 +17,7 @@
             <a href="{{ url }}">{{ item[0] }}</a>
             <div class="dropdown-content">
               {% for artist in site.data.artist %}
-                <a href="{{site.baseurl}}/tattoos/{{artist.name|remove:' '|downcase}}">{{artist.name}}</a>
+                <a href="{{site.baseurl}}/tattoos/{{artist.name|remove:' '| downcase }}">{{artist.name}}</a>
               {% endfor %}
             </div>
           </div>

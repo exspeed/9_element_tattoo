@@ -26,7 +26,7 @@ title: Meet the Artists
      	 <div class="container card">
        <div class="card-container">  
         <div class="img-flex">
-     	 <a href="{{site.baseurl}}/tattoos/{{person.name|remove:' '}}">
+     	 <a href="{{site.baseurl}}/tattoos/{{person.name|remove:' ' | downcase }}">
 			<img src="{{ site.baseurl }}{{person.profile_picture}}" style="border-radius: 10px;" alt="profile_picture" >
 		</a>
         </div>
