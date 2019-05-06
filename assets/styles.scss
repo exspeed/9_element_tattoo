@@ -32,12 +32,15 @@ header {
 
 
 header .logo{
+	
 	color: #fff;
 	height: 50px;
 	line-height: 50px;
-	font-size: 24px;
 	float: left;
-	font-weight: bold;
+	img{
+		max-height: 4rem;
+		padding: 6px;
+	}
 }
 
 
@@ -82,7 +85,7 @@ header nav ul li:hover ul{
 
 header nav ul li ul li{
 	display: block;
-	width: 200px;
+	width: 250px;
 }
 
 header nav ul li a{
