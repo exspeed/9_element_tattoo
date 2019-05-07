@@ -19,12 +19,20 @@ TODO:
 
 [X] In Tattoo/index.html put Profile button at bottom + fix margins
 [X] Resize label in Book.html
-[] add social media icon to layout/artist.html --> tattoo/JimTran
-[] FIX MOBILE EXPERIENCE
+[X] FIX MOBILE EXPERIENCE
 	- front-page-header. 
+[] add social media icon to layout/artist.html --> tattoo/JimTran
+[] fix front page
 
 
 [] Add animation to dropdown menu
 [] Set active header 
 [] IN contact.html add slideshow of store
-[] look into 'Back to top' footer
+[] look into 'Back to top' footer <-- remove
+
+
+WITH JIM
+[] update map
+[] remove fake users
+[] update conventions 
+[] store??? 

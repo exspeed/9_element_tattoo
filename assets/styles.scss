@@ -48,6 +48,10 @@ header nav{
 	float: right;
 }
 
+header #nav-front{
+	float: none; //override header nav
+}
+
 header nav ul{
 	margin: 0;
 	padding: 0;
@@ -57,6 +61,7 @@ header nav ul{
 header nav ul li{
 	list-style: none;
 	position: relative;
+
 }
 
 header nav ul li.sub-menu:before{
@@ -165,7 +170,7 @@ header nav ul li a.active{
 
 	.menu-toggle{
 		display: block;
-		height: 100%;
+  		height: $headerSize;
 	}
 }
 
