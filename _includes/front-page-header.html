@@ -1,10 +1,12 @@
-<header class="header" style="background-color: transparent;">
+{% assign feature_text = page.feature_text %}
+
+<header class="header" style="background-color: transparent; position: static;">
  	<button class="button menu-toggle" aria-label="Menu toggle">
     {% include icon.html id="nav" title="Menu" %}
 	</button>
 
-	<section style="clear: both">
- 	{% include site-feature.html %}
+	<section style="clear: both; max-width: 750px; margin-left: auto; margin-right: auto;" >
+  		<img style=" " src="{{site.baseurl}}{{ feature_text }}" alt="{{ feature_text }}"/>
 	</section>
     {% include front-page-nav-header.html %}
 

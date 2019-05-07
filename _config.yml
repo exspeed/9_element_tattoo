@@ -39,8 +39,8 @@ navigation_header:
   Contact: /contact
 
 # Footer nav
-navigation_footer:
-  Back to top: "#top"
+#navigation_footer:
+  #Back to top: "#top"
 
 
 # Collections

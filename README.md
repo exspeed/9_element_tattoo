@@ -22,13 +22,13 @@ TODO:
 [X] FIX MOBILE EXPERIENCE
 	- front-page-header. 
 [] add social media icon to layout/artist.html --> tattoo/JimTran
-[] fix front page
+[X] fix front page
 
 
 [] Add animation to dropdown menu
 [] Set active header 
 [] IN contact.html add slideshow of store
-[] look into 'Back to top' footer <-- remove
+[X] look into 'Back to top' footer <-- remove
 
 
 WITH JIM
