@@ -27,19 +27,19 @@ header {
 	background: $headerBackgroundColor;
 	z-index: 10;
 	box-sizing: border-box;
-	padding: 0 100px;
+	padding: 0 250px;
 }
 
 
 header .logo{
 	
 	color: #fff;
-	height: 50px;
-	line-height: 50px;
+	height: $headerSize;
+	line-height: $headerSize;
 	float: left;
 	img{
-		max-height: 4rem;
-		padding: 6px;
+		max-height: $headerSize;
+		padding: 1px 0;
 	}
 }
 
@@ -62,10 +62,10 @@ header nav ul li{
 header nav ul li.sub-menu:before{
 	list-style: none;
 	position: relative;
-	content: '\f0d7';
+	content: '\f107';
 	font-family: fontAwesome;
 	position: absolute;
-	line-height: 50px;
+	line-height: $headerSize;
 	color: #fff;
 	right: 5px;
 }
@@ -89,8 +89,8 @@ header nav ul li ul li{
 }
 
 header nav ul li a{
-	height: 50px;
-	line-height: 50px;
+	height: $headerSize;
+	line-height: $headerSize;
 	padding: 0 20px;
 	color: #fff;
 	display: block;
@@ -100,7 +100,8 @@ header nav ul li a{
 header nav ul li a:hover,
 header nav ul li a.active{
 	color: #fff;
-	background: #2196f3;
+	//background: #2196f3;
+	opacity: 0.8;
 }
 
 .menu-toggle{
@@ -115,18 +116,25 @@ header nav ul li a.active{
   display: none;
 }
 
+@media (max-width: 1500px){
+	header{
+		padding: 0 100px;
+	}
+}
 
 @media (max-width: 991px){
 	header{
 		padding: 0 20px;
 	}
+
+
 	header nav{
 		//display: none;
 		position: absolute;
 		width: 100%;
-		height: calc(100vh - 50px);
+		height: calc(100vh - 60px);
 		background: #333;
-		top: 50px;
+		top: $headerSize;
 		left: -100%;
 		transition: 0.5s;
 		opacity: 0.98;
@@ -146,7 +154,8 @@ header nav ul li a.active{
 	}
 	header nav ul li:hover ul{
 		position: relative;
-		background: #003e6f;
+		//background: #003e6f;
+		opacity: 0.8;
 	}
 
 	header nav ul li ul li{
@@ -156,6 +165,7 @@ header nav ul li a.active{
 
 	.menu-toggle{
 		display: block;
+		height: 100%;
 	}
 }
 
