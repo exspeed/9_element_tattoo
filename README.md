@@ -21,17 +21,20 @@ TODO:
 [X] Resize label in Book.html
 [X] FIX MOBILE EXPERIENCE
 	- front-page-header. 
-[] add social media icon to layout/artist.html --> tattoo/JimTran
 [X] fix front page
+[X] look into 'Back to top' footer <-- remove
+
 
 
 [] Add animation to dropdown menu
 [] Set active header 
-[] IN contact.html add slideshow of store
-[X] look into 'Back to top' footer <-- remove
+[] In contact.html add slideshow of store
+[] add social media icon to layout/artist.html
+[] fade in title
 
 
 WITH JIM
+[] Change background
 [] get jimtran_ll account
 [] update map
 [] remove fake artist and add real artist
