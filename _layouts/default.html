@@ -45,7 +45,7 @@
     {% include site-before-start.html %}
   </head>
 
-  <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}" style="background: url({{"/assets/images/black-daisy.jpg" | prepend:site.baseurl }}); background-position: 66% 50%; background-repeat: no-repeat; background-color: black" >
+  <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}" style="background: url({{"/assets/images/background.jpg" | prepend:site.baseurl }}); background-position: 50% 50%; background-repeat: no-repeat; background-color: black" >
     {% include site-icons.svg %}
 
     {{ content }}

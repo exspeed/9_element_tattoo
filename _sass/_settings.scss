@@ -15,10 +15,19 @@ $captionColour: #AEAEAE;
 $white: #ffffff;
 
 $headerSize: 60px;
+$maxLogoWidth: 750px;
+
+/*
+black1: #2E221C
+dim gray1: #7C5C4C
+gray: #9E9284
+dim gray2: #5A4C41
+black2: #050504
+*/
 
 // Typography
 $bodytype: (
-  font-family: 'Georgia, serif',
+  font-family: 'Arial, serif',
   regular: 400,
   bold: 700,
   italic: italic,
@@ -26,7 +35,7 @@ $bodytype: (
 );
 
 $headingtype: (
-  font-family: '"Merriweather", serif',
+  font-family: '"Arial", serif',
   regular: 400,
   bold: 700,
   cap-height: 0.75

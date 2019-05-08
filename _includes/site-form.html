@@ -30,6 +30,8 @@
 
     <select id="artist-form-dropdown" class="input">
       <option value="Any">Any</option>
+      <option value="Store">9 Element (General Inquiries)</option>
+
         {% for artist in site.data.artist %}
           <option value="{{artist.name}}">{{artist.name}}</option>
         {% endfor %}

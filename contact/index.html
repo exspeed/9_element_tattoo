@@ -20,10 +20,8 @@ title: Booking and Contact
 		<img src="{{ site.baseurl}}/assets/images/stockphotos/location.png"  alt="profile_picture" >
 		</div>
 		<div class="store-info">
-      	  <p> Location: {{store.location}} <br>
-       	   Phone: {{store.phone}} <br>
-     	   Email: {{store.email}} <br>
-     	   Hours:<br>{% for day in store.hours %}&emsp;{{day[0]}}: {{day[1]}}<br>
+       	   <b>Phone:</b>{{store.phone}} <br>
+     	   Hours:<br>{% for day in store.hours %}{{day[0]}}: {{day[1]}}<br>
        	   {% endfor %}
        	</p>
 		</div>

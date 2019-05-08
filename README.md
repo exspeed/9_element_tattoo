@@ -25,18 +25,30 @@ TODO:
 [X] look into 'Back to top' footer <-- remove
 
 
-
-[] Add animation to dropdown menu
-[] Set active header 
-[] In contact.html add slideshow of store
-[] add social media icon to layout/artist.html
-[] fade in title
+[3] Add welcome --> fancy font.
+[3] Add animation to dropdown menu
+[3] Hover add back underline.
+[3] Set active header 
+[3] In contact.html add slideshow of store
+[1] In contact.html change layout to fit one page
+[1] fix scrolling on mobile
+[2] add social media icon to layout/artist.html
+[X] fade in title
+[1] 2 images minimum on mobile --> artist.html 
+	4->2;
+[2] make a tab for jimtran_/jimtran_ll artist.html 
+[2] FAQ --> SIMILAR http://pages.cpsc.ucalgary.ca/~atheng/projects.html
+	https://www.blackandbluetattoo.ca/faq#tattoocost
+	http://horibenny.com/contact/
+[2] Move front page to the left
+[3] Add splits between header, and all text cap
+[2] Meta tags
 
 
 WITH JIM
-[] Change background
-[] get jimtran_ll account
-[] update map
-[] remove fake artist and add real artist
+[X] Change background
+[X] get jimtran_ll account
+[X] update map
+[-] remove fake artist and add real artist
 [] update with real conventions 
 [] store??? 

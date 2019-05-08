@@ -27,7 +27,7 @@ header {
 	background: $headerBackgroundColor;
 	z-index: 10;
 	box-sizing: border-box;
-	padding: 0 250px;
+	padding: 0 125px;
 }
 
 
@@ -50,6 +50,11 @@ header nav{
 
 header #nav-front{
 	float: none; //override header nav
+	max-width: $maxLogoWidth;
+}
+
+logo-section{
+	max-width: $maxLogoWidth;
 }
 
 header nav ul{
