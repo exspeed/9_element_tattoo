@@ -32,7 +32,8 @@ TODO:
 
 
 WITH JIM
+[] get jimtran_ll account
 [] update map
-[] remove fake users
-[] update conventions 
+[] remove fake artist and add real artist
+[] update with real conventions 
 [] store??? 
